@@ -1,0 +1,73 @@
+{
+  "functions": {
+    "predeploy": [
+      "nx build functions"
+    ],
+    "source": "dist/apps/functions"
+  },
+  "hosting": [
+    {
+      "target": "burgerschap-leerling",
+      "public": "dist/apps/burgerschap-leerling",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "predeploy": [
+        "nx build burgerschap-leerling --prod"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "burgerschap-leraar",
+      "public": "dist/apps/burgerschap-leraar",
+      "predeploy": [
+        "nx build burgerschap-leraar --prod"
+      ],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "burgerschap-storybook",
+      "public": "dist/storybook/ui",
+      "predeploy": [
+        "nx run ui:build-storybook"
+      ],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ],
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "emulators": {
+    "firestore": {
+      "port": "8081"
+    }
+  }
+}

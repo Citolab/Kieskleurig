@@ -1,0 +1,23 @@
+{
+  "projects": {
+    "default": "-dev",
+    "burgerpad-leerling": "burgerschap-dev",
+    "burgerpad-leraar": "burgerschap-dev",
+    "burgerpad-storybook": "burgerschap-dev"
+  },
+  "targets": {
+    "burgerschap-dev": {
+      "hosting": {
+        "burgerschap-leerling": [
+          "burgerschap-dev"
+        ],
+        "burgerschap-leraar": [
+          "leraar-burgerschap-dev"
+        ],
+        "burgerschap-storybook": [
+          "burgerschap-storybook"
+        ]
+      }
+    }
+  }
+}

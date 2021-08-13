@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  background-color: #f9f5f4;
+}
+h1 {
+  font-family: 'header';
+}
+
+@layer base {
+  @font-face {
+    font-family: Days One;
+    font-weight: 400;
+    src: url(/assets/fonts/days-one-v10-latin-regular.woff) format('woff');
+  }
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+}
+@layer utilities {
+  p.speech {
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 2px solid #020644;
+    @apply border-primary;
+    line-height: 40px;
+  }
+  p.speech:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+    top: 48px;
+    border: 8px solid;
+    border-color: #020644 transparent transparent #020644;
+  }
+  p.speech:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 32px;
+    top: 48px;
+    border: 6px solid;
+    border-color: #fff transparent transparent #fff;
+  }
+}

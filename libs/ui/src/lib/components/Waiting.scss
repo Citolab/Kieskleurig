@@ -1,0 +1,53 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  margin-left: 10%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.dot {
+  width: 24px;
+  height: 24px;
+  background: #3ac;
+  border-radius: 100%;
+  display: inline-block;
+  animation: slide 1s infinite;
+  &:nth-child(1) {
+    animation-delay: 0.1s;
+    background: #FB5E2E;
+  }
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+    background: #FFB740;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.3s;
+    background: #1AADA4;
+  }
+  &:nth-child(4) {
+    animation-delay: 0.4s;
+    background: #333988;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+    opacity: 0.3;
+    transform: scale(2);
+    opacity: 0.3;
+    transform: scale(2);
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+    transform: scale(1);
+    transform: scale(1);
+    transform: scale(1);
+  }
+}

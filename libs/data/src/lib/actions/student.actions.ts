@@ -1,0 +1,19 @@
+export const studentTypes = {
+    LOGIN: {
+        REQUEST: 'LOGIN.REQUEST',
+        SUCCESS: 'LOGIN.SUCCESS',
+        FAILURE: 'LOGIN.FAILURE',
+    },
+    LOGOUT: {
+        REQUEST: 'LOGOUT.REQUEST',
+        SUCCESS: 'LOGOUT.SUCCESS',
+        FAILURE: 'LOGOUT.FAILURE',
+    },
+    ORDER: {
+        START: 'ORDER.START',
+        SORT: 'ORDER.SORT',
+        INTENSION: 'ORDER.INTENSION',
+        STATE_CHANGE: 'ORDER.STATE_CHANGE',
+        CURRENT_CARD_CHANGE: 'ORDER.CURRENT_CARD_CHANGE'
+    }
+}
